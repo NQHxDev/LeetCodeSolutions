@@ -13,6 +13,7 @@
 #include <stack>
 #include <cmath>
 #include <climits>
+#include <iomanip>
 
 namespace Utils {
    // Hàm nhập mảng với n phần tử
@@ -36,16 +37,16 @@ namespace Utils {
 
    // Hàm xuất kết quả dạng đơn giản
    template <typename T>
-    void printResult(const std::vector<T>& result) {
-        if (result.empty()) {
-            std::cout << "No solution found!" << std::endl;
-            return;
-        }
-        for (size_t i = 0; i < result.size(); ++i) {
-            std::cout << result[i] << (i == result.size() - 1 ? "" : " ");
-        }
-        std::cout << std::endl;
-    }
+   void printResult(const std::vector<T>& result) {
+      if (result.empty()) {
+         std::cout << "No solution found!" << std::endl;
+         return;
+      }
+      for (size_t i = 0; i < result.size(); ++i) {
+         std::cout << result[i] << (i == result.size() - 1 ? "" : " ");
+      }
+      std::cout << std::endl;
+   }
 }
 
 #endif
