@@ -3,3 +3,4 @@
 .cph/
 
 *.bin
+.DS_Store

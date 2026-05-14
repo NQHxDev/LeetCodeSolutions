@@ -1,0 +1,63 @@
+#include "../../utils/utils.h"
+
+using namespace std;
+
+class Solution {
+public:
+   double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+      if (nums1.size() > nums2.size()) {
+         return findMedianSortedArrays(nums2, nums1);
+      }
+
+      int m = nums1.size();
+      int n = nums2.size();
+      int low = 0, high = m;
+
+      while (low <= high) {
+         int partitionX = (low + high) / 2;
+         int partitionY = (m + n + 1) / 2 - partitionX;
+
+         // Nếu partitionX = 0, bên trái không có phần tử nào -> dùng INT_MIN
+         // Nếu partitionX = m, bên phải không có phần tử nào -> dùng INT_MAX
+         int maxLeftX = (partitionX == 0) ? INT_MIN : nums1[partitionX - 1];
+         int minRightX = (partitionX == m) ? INT_MAX : nums1[partitionX];
+
+         int maxLeftY = (partitionY == 0) ? INT_MIN : nums2[partitionY - 1];
+         int minRightY = (partitionY == n) ? INT_MAX : nums2[partitionY];
+
+         if (maxLeftX <= minRightY && maxLeftY <= minRightX) {
+            if ((m + n) % 2 == 0) {
+               return (double)(max(maxLeftX, maxLeftY) + min(minRightX, minRightY)) / 2.0;
+            } else {
+               return (double)max(maxLeftX, maxLeftY);
+            }
+         } else if (maxLeftX > minRightY) {
+            // Nhát cắt trên X đang quá xa về bên phải, cần dịch sang trái
+            high = partitionX - 1;
+         } else {
+            // Nhát cắt trên X đang quá xa về bên trái, cần dịch sang phải
+            low = partitionX + 1;
+         }
+      }
+
+      return 0.0;
+   }
+};
+
+int main() {
+
+   int n, m;
+
+   if (!(cin >> n)) return 0;
+   vector<int> nums1 = Utils::readVector<int>(n);
+
+   if (!(cin >> m)) return 0;
+   vector<int> nums2 = Utils::readVector<int>(m);
+
+   Solution sol;
+   double result = sol.findMedianSortedArrays(nums1, nums2);
+
+   cout << fixed << setprecision(5) << result << endl;
+
+   return 0;
+}
