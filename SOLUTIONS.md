@@ -8,6 +8,7 @@
 ## Medium
 
 [Medium] 3. Longest Substring Without Repeating Characters
+[Medium] 5. Longest Palindromic Substring
 
 ## Hard
 
