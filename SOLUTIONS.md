@@ -4,7 +4,7 @@
 [Easy] 1. Two Sum
 
 ## Medium
-*(Chưa có bài giải)*
+[Medium] 3. Longest Substring Without Repeating Characters
 
 ## Hard
 [Hard] 4. Median of Two Sorted Arrays
