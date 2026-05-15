@@ -4,6 +4,7 @@
 
 [Easy] 1. Two Sum
 [Easy] 14. Longest Common Prefix
+[Easy] 20. Valid Parentheses
 
 ## Medium
 
