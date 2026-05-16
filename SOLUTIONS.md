@@ -11,6 +11,7 @@
 
 - [Medium] 3. Longest Substring Without Repeating Characters
 - [Medium] 5. Longest Palindromic Substring
+- [Medium] 6. Zigzag Conversion
 - [Medium] 15. 3Sum
 - [Medium] 153. Find Minimum in Rotated Sorted Array
 

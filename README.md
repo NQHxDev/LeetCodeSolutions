@@ -3,7 +3,7 @@
 <div align="center">
   <h3>"One problem a day keeps the unemployment away"</h3>
 
-  [![LeetCode Stats](https://leetcard.jacoblin.cool/NQHxDev?theme=dark&font=Recursive)](https://leetcode.com/NQHxDev/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/NQHxDev?theme=dark&font=Recursive)](https://leetcode.com/NQHxDev/)
 
   <p>
       <img src="https://img.shields.io/badge/Language-C++17-blue?logo=c%2B%2B" alt="C++">
@@ -16,6 +16,7 @@
 ---
 
 ## Introduction
+
 Welcome to my algorithm repository! This is where I hone my logical thinking and programming skills by tackling **LeetCode** challenges daily
 
 - **Goal:** Enhancing algorithmic thinking and mastering complex problem-solving patterns
@@ -25,12 +26,12 @@ Welcome to my algorithm repository! This is where I hone my logical thinking and
 ---
 
 ## Directory Structure
+
 ```text
-.
 ├── Easy/
 │   └── [Problem_No]-Problem_Title/
 │       ├── Solution.cpp    # Optimized C++ solution
-│       └── Design.md      # Design thinking and notes
+│       └── Design.md       # Design thinking and notes
 ├── Medium/
 ├── Hard/
 └── README.md
