@@ -19,6 +19,7 @@
 - [17. Letter Combinations of a Phone Number](./Medium/[17]-Letter-Combinations-of-a-Phone-Number)
 - [18. 4Sum](./Medium/[18]-4Sum)
 - [19. Remove Nth Node From End of List](./Medium/[19]-Remove-Nth-Node-From-End-of-List)
+- [22. Generate Parentheses](./Medium/[22]-Generate-Parentheses)
 - [153. Find Minimum in Rotated Sorted Array](./Medium/[153]-Find-Minimum-in-Rotated-Sorted-Array)
 - [1306. Jump Game III](./Medium/[1306]-Jump-Game-III)
 
