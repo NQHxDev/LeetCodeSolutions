@@ -2,14 +2,6 @@
 
 using namespace std;
 
-struct ListNode {
-   int val;
-   ListNode *next;
-   ListNode() : val(0), next(nullptr) {}
-   ListNode(int x) : val(x), next(nullptr) {}
-   ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
-
 class Solution {
 public:
    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
@@ -43,55 +35,35 @@ public:
    }
 };
 
-ListNode* createList(const vector<int>& nums) {
-   if (nums.empty()) return nullptr;
-   ListNode* head = new ListNode(nums[0]);
-   ListNode* current = head;
-   for (size_t i = 1; i < nums.size(); ++i) {
-      current->next = new ListNode(nums[i]);
-      current = current->next;
-   }
-   return head;
-}
-
-void printList(ListNode* head) {
-   if (!head) {
-      cout << "[]" << endl;
-      return;
-   }
-   while (head) {
-      cout << head->val << (head->next ? " -> " : "");
-      head = head->next;
-   }
-   cout << endl;
-}
-
 int main() {
    Solution sol;
 
    // Test case 1: [1, 2, 4], [1, 3, 4]
    cout << "Test 1: L1 = [1, 2, 4], L2 = [1, 3, 4]" << endl;
-   ListNode* l1 = createList({1, 2, 4});
-   ListNode* l2 = createList({1, 3, 4});
+   ListNode* l1 = Utils::createList({1, 2, 4});
+   ListNode* l2 = Utils::createList({1, 3, 4});
    ListNode* res1 = sol.mergeTwoLists(l1, l2);
    cout << "Result: ";
-   printList(res1);
+   Utils::printList(res1);
+   Utils::freeList(res1);
 
    // Test case 2: [], []
    cout << "\nTest 2: L1 = [], L2 = []" << endl;
-   ListNode* l3 = createList({});
-   ListNode* l4 = createList({});
+   ListNode* l3 = Utils::createList({});
+   ListNode* l4 = Utils::createList({});
    ListNode* res2 = sol.mergeTwoLists(l3, l4);
    cout << "Result: ";
-   printList(res2);
+   Utils::printList(res2);
+   Utils::freeList(res2);
 
    // Test case 3: [], [0]
    cout << "\nTest 3: L1 = [], L2 = [0]" << endl;
-   ListNode* l5 = createList({});
-   ListNode* l6 = createList({0});
+   ListNode* l5 = Utils::createList({});
+   ListNode* l6 = Utils::createList({0});
    ListNode* res3 = sol.mergeTwoLists(l5, l6);
    cout << "Result: ";
-   printList(res3);
+   Utils::printList(res3);
+   Utils::freeList(res3);
 
    return 0;
 }
