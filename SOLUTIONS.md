@@ -16,6 +16,7 @@
 - [Medium] 16. 3Sum Closest
 - [Medium] 18. 4Sum
 - [Medium] 153. Find Minimum in Rotated Sorted Array
+- [Medium] 1306. Jump Game III
 
 ## Hard
 
