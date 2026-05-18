@@ -29,4 +29,5 @@
 - [4. Median of Two Sorted Arrays](./Hard/[4]-Median-of-Two-Sorted-Arrays)
 - [10. Regular Expression Matching](./Hard/[10]-Regular-Expression-Matching)
 - [154. Find Minimum in Rotated Sorted Array II](./Hard/[154]-Find-Minimum-in-Rotated-Sorted-Array-II)
+- [1340. Jump Game V](./Hard/[1340]-Jump-Game-V)
 - [1345. Jump Game IV](./Hard/[1345]-Jump-Game-IV)
