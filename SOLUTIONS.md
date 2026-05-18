@@ -24,6 +24,7 @@
 - [55. Jump Game](./Medium/[55]-Jump-Game)
 - [153. Find Minimum in Rotated Sorted Array](./Medium/[153]-Find-Minimum-in-Rotated-Sorted-Array)
 - [1306. Jump Game III](./Medium/[1306]-Jump-Game-III)
+- [1696. Jump Game VI](./Medium/[1696]-Jump-Game-VI)
 - [1871. Jump Game VII](./Medium/[1871]-Jump-Game-VII)
 
 ## Hard
