@@ -20,6 +20,7 @@
 - [18. 4Sum](./Medium/[18]-4Sum)
 - [19. Remove Nth Node From End of List](./Medium/[19]-Remove-Nth-Node-From-End-of-List)
 - [22. Generate Parentheses](./Medium/[22]-Generate-Parentheses)
+- [45. Jump Game II](./Medium/[45]-Jump-Game-II)
 - [55. Jump Game](./Medium/[55]-Jump-Game)
 - [153. Find Minimum in Rotated Sorted Array](./Medium/[153]-Find-Minimum-in-Rotated-Sorted-Array)
 - [1306. Jump Game III](./Medium/[1306]-Jump-Game-III)
