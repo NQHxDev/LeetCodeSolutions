@@ -22,6 +22,7 @@
 - [22. Generate Parentheses](./Medium/[22]-Generate-Parentheses)
 - [153. Find Minimum in Rotated Sorted Array](./Medium/[153]-Find-Minimum-in-Rotated-Sorted-Array)
 - [1306. Jump Game III](./Medium/[1306]-Jump-Game-III)
+- [1871. Jump Game VII](./Medium/[1871]-Jump-Game-VII)
 
 ## Hard
 
