@@ -26,6 +26,7 @@
 - [1306. Jump Game III](./Medium/[1306]-Jump-Game-III)
 - [1696. Jump Game VI](./Medium/[1696]-Jump-Game-VI)
 - [1871. Jump Game VII](./Medium/[1871]-Jump-Game-VII)
+- [3660. Jump Game IX](./Medium/[3660]-Jump-Game-IX)
 
 ## Hard
 
