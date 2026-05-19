@@ -7,6 +7,7 @@
 - [20. Valid Parentheses](./Easy/[20]-Valid-Parentheses)
 - [21. Merge Two Sorted Lists](./Easy/[21]-Merge-Two-Sorted-Lists)
 - [26. Remove Duplicates from Sorted Array](./Easy/[26]-Remove-Duplicates-from-Sorted-Array)
+- [27. Remove Element](./Easy/[27]-Remove-Element)
 - [2540. Minimum Common Value](./Easy/[2540]-Minimum-Common-Value)
 
 ## Medium
