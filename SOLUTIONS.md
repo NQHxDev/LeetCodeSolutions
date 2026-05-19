@@ -6,6 +6,7 @@
 - [14. Longest Common Prefix](./Easy/[14]-Longest-Common-Prefix)
 - [20. Valid Parentheses](./Easy/[20]-Valid-Parentheses)
 - [21. Merge Two Sorted Lists](./Easy/[21]-Merge-Two-Sorted-Lists)
+- [2540. Minimum Common Value](./Easy/[2540]-Minimum-Common-Value)
 
 ## Medium
 
