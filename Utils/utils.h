@@ -35,6 +35,18 @@ namespace Utils {
       return vec;
    }
 
+   // Hàm nhập mảng tự động đọc kích thước trước
+   template <typename T>
+   std::vector<T> readVector() {
+      int n;
+      if (!(std::cin >> n)) return {};
+      std::vector<T> vec(n);
+      for (int i = 0; i < n; ++i) {
+         std::cin >> vec[i];
+      }
+      return vec;
+   }
+
    // Hàm xuất mảng với ký tự phân cách
    template <typename T>
    void printVector(const std::vector<T>& vec, const std::string& separator = " ") {

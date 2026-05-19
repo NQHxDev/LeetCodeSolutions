@@ -27,11 +27,8 @@ public:
 
 int main() {
 
-   int n, m;
-   if (!(cin >> n >> m)) return 0;
-
-   vector<int> nums1 = Utils::readVector<int>(n);
-   vector<int> nums2 = Utils::readVector<int>(m);
+   vector<int> nums1 = Utils::readVector<int>();
+   vector<int> nums2 = Utils::readVector<int>();
 
    Solution sol;
    cout << sol.getCommon(nums1, nums2);
