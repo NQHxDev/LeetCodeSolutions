@@ -9,6 +9,7 @@
 - [26. Remove Duplicates from Sorted Array](./Easy/[26]-Remove-Duplicates-from-Sorted-Array)
 - [27. Remove Element](./Easy/[27]-Remove-Element)
 - [35. Search Insert Position](./Easy/[35]-Search-Insert-Position)
+- [58. Length of Last Word](./Easy/[58]-Length-of-Last-Word)
 - [2540. Minimum Common Value](./Easy/[2540]-Minimum-Common-Value)
 
 ## Medium
