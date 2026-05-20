@@ -31,6 +31,7 @@
 - [1306. Jump Game III](./Medium/[1306]-Jump-Game-III)
 - [1696. Jump Game VI](./Medium/[1696]-Jump-Game-VI)
 - [1871. Jump Game VII](./Medium/[1871]-Jump-Game-VII)
+- [2657. Find the Prefix Common Array of Two Arrays](./Medium/[2657]-Find-the-Prefix-Common-Array-of-Two-Arrays)
 - [3660. Jump Game IX](./Medium/[3660]-Jump-Game-IX)
 
 ## Hard

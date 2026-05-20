@@ -3,6 +3,7 @@
 .cph/
 
 *.bin
+*.exe
 .DS_Store
 
 NOTE.md
