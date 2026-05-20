@@ -10,6 +10,7 @@
 - [27. Remove Element](./Easy/[27]-Remove-Element)
 - [35. Search Insert Position](./Easy/[35]-Search-Insert-Position)
 - [58. Length of Last Word](./Easy/[58]-Length-of-Last-Word)
+- [796. Rotate String](./Easy/[796]-Rotate-String)
 - [2540. Minimum Common Value](./Easy/[2540]-Minimum-Common-Value)
 
 ## Medium
