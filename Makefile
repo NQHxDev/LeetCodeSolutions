@@ -25,6 +25,7 @@ h: $(EXE)
 git: $(EXE)
 	@git add .
 	@git commit -m "feat: add solution and design for $(LAST_SOL)"
+	@git push origin $(shell git symbolic-ref --short HEAD)
 	@$(CMD) clear
 
 .PHONY: e m h git $(filter-out e m h git, $(MAKECMDGOALS))

@@ -8,6 +8,7 @@
 - [21. Merge Two Sorted Lists](./Easy/[21]-Merge-Two-Sorted-Lists)
 - [26. Remove Duplicates from Sorted Array](./Easy/[26]-Remove-Duplicates-from-Sorted-Array)
 - [27. Remove Element](./Easy/[27]-Remove-Element)
+- [31. Next Permutation](./Medium/[31]-Next-Permutation)
 - [35. Search Insert Position](./Easy/[35]-Search-Insert-Position)
 - [58. Length of Last Word](./Easy/[58]-Length-of-Last-Word)
 - [796. Rotate String](./Easy/[796]-Rotate-String)
