@@ -22,5 +22,7 @@ m: $(EXE)
 h: $(EXE)
 	$(CMD) Hard $(filter-out $@,$(MAKECMDGOALS))
 
+.PHONY: e m h $(filter-out e m h, $(MAKECMDGOALS))
+
 %:
 	@:
