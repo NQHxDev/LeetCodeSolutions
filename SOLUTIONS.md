@@ -26,6 +26,7 @@
 - [18. 4Sum](./Medium/[18]-4Sum)
 - [19. Remove Nth Node From End of List](./Medium/[19]-Remove-Nth-Node-From-End-of-List)
 - [22. Generate Parentheses](./Medium/[22]-Generate-Parentheses)
+- [29. Divide Two Integers](./Medium/[29]-Divide-Two-Integers)
 - [45. Jump Game II](./Medium/[45]-Jump-Game-II)
 - [55. Jump Game](./Medium/[55]-Jump-Game)
 - [61. Rotate List](./Medium/[61]-Rotate-List)

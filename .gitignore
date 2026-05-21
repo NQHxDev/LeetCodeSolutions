@@ -2,6 +2,8 @@
 .dev/
 .cph/
 
+.vscode/
+
 *.bin
 *.exe
 .DS_Store

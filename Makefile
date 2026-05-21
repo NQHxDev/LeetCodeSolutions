@@ -1,4 +1,3 @@
-# Xác định file nhị phân và cờ biên dịch dựa trên hệ điều hành
 ifeq ($(OS),Windows_NT)
    EXE = .dev/create.exe
    CMD = $(EXE)
@@ -9,7 +8,8 @@ else
    FLAGS = -std=c++17
 endif
 
-# Tự động biên dịch tool nếu chưa có
+LAST_SOL = $(shell cat .dev/last_solution.txt 2>/dev/null || type .dev\last_solution.txt 2>nul)
+
 $(EXE): .dev/create.cpp
 	g++ $(FLAGS) .dev/create.cpp -o $(EXE)
 
@@ -22,7 +22,12 @@ m: $(EXE)
 h: $(EXE)
 	$(CMD) Hard $(filter-out $@,$(MAKECMDGOALS))
 
-.PHONY: e m h $(filter-out e m h, $(MAKECMDGOALS))
+git: $(EXE)
+	@git add .
+	@git commit -m "feat: add solution and design for $(LAST_SOL)"
+	@$(CMD) clear
+
+.PHONY: e m h git $(filter-out e m h git, $(MAKECMDGOALS))
 
 %:
 	@:
