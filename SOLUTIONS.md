@@ -19,6 +19,7 @@
 - [5. Longest Palindromic Substring](./Medium/[5]-Longest-Palindromic-Substring)
 - [6. Zigzag Conversion](./Medium/[6]-Zigzag-Conversion)
 - [7. Reverse Integer](./Medium/[7]-Reverse-Integer)
+- [8. String to Integer](./Medium/[8]-String-to-Integer)
 - [11. Container With Most Water](./Medium/[11]-Container-With-Most-Water)
 - [15. 3Sum](./Medium/[15]-3Sum)
 - [16. 3Sum Closest](./Medium/[16]-3Sum-Closest)
