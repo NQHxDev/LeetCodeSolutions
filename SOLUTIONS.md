@@ -27,6 +27,7 @@
 - [18. 4Sum](./Medium/[18]-4Sum)
 - [19. Remove Nth Node From End of List](./Medium/[19]-Remove-Nth-Node-From-End-of-List)
 - [22. Generate Parentheses](./Medium/[22]-Generate-Parentheses)
+- [24. Swap Nodes in Pairs](./Medium/[24]-Swap-Nodes-in-Pairs)
 - [29. Divide Two Integers](./Medium/[29]-Divide-Two-Integers)
 - [31. Next Permutation](./Medium/[31]-Next-Permutation)
 - [33. Search in Rotated Sorted Array](./Medium/[33]-Search-in-Rotated-Sorted-Array)
