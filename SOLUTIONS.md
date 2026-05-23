@@ -1,5 +1,6 @@
 # Danh sách bài giải LeetCode
 
+- [1752. Check if Array Is Sorted and Rotated](./Easy/[1752]-Check-if-Array-Is-Sorted-and-Rotated)
 ## Easy
 
 - [1. Two Sum](./Easy/[1]-TwoSum)
