@@ -21,7 +21,7 @@ Welcome to my algorithm repository! This is where I hone my logical thinking and
 
 - **Goal:** Enhancing algorithmic thinking and mastering complex problem-solving patterns
 - **Language:** Exclusively using **C++** for performance and deep-diving into data structures
-- **Categorization:** Problems are organized by difficulty (Easy, Medium, Hard)
+- **Categorization:** Problems are organized by difficulty (Easy, Medium, Hard) and a Custom section for problems outside of LeetCode
 
 ---
 
@@ -34,10 +34,14 @@ Welcome to my algorithm repository! This is where I hone my logical thinking and
 │       └── Design.md       # Design thinking and notes
 ├── Medium/
 ├── Hard/
+├── Custom/                 # Custom problems (not on LeetCode)
+│   └── Problem_Title/
+│       ├── Solution.cpp
+│       └── Design.md
 └── README.md
 ```
 
-Each problem is organized within its own directory named `[Problem_No]-Problem_Title`. Inside, you will find the implementation and detailed design notes.
+Each LeetCode problem is organized within its own directory named `[Problem_No]-Problem_Title` (or `Problem_Title` for Custom problems). Inside, you will find the implementation and detailed design notes.
 
 ---
 

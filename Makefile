@@ -2,16 +2,19 @@ ifeq ($(OS),Windows_NT)
    EXE = .dev/create.exe
    CMD = $(EXE)
    FLAGS = -std=c++17 -static -lstdc++fs
+   MKDIR_DEV = if not exist .dev mkdir .dev
 else
    EXE = .dev/create
    CMD = ./$(EXE)
    FLAGS = -std=c++17
+   MKDIR_DEV = mkdir -p .dev
 endif
 
 LAST_SOL = $(shell cat .dev/last_solution.txt 2>/dev/null || type .dev\last_solution.txt 2>nul)
 
-$(EXE): .dev/create.cpp
-	g++ $(FLAGS) .dev/create.cpp -o $(EXE)
+$(EXE): Utils/CreateSolution.cpp
+	@$(MKDIR_DEV)
+	g++ $(FLAGS) Utils/CreateSolution.cpp -o $(EXE)
 
 e: $(EXE)
 	$(CMD) Easy $(filter-out $@,$(MAKECMDGOALS))
