@@ -1,6 +1,5 @@
 # Danh sách bài giải LeetCode
 
-- [1752. Check if Array Is Sorted and Rotated](./Easy/[1752]-Check-if-Array-Is-Sorted-and-Rotated)
 ## Easy
 
 - [1. Two Sum](./Easy/[1]-TwoSum)
@@ -12,6 +11,7 @@
 - [35. Search Insert Position](./Easy/[35]-Search-Insert-Position)
 - [58. Length of Last Word](./Easy/[58]-Length-of-Last-Word)
 - [796. Rotate String](./Easy/[796]-Rotate-String)
+- [1752. Check if Array Is Sorted and Rotated](./Easy/[1752]-Check-if-Array-Is-Sorted-and-Rotated)
 - [2540. Minimum Common Value](./Easy/[2540]-Minimum-Common-Value)
 
 ## Medium
@@ -32,6 +32,7 @@
 - [29. Divide Two Integers](./Medium/[29]-Divide-Two-Integers)
 - [31. Next Permutation](./Medium/[31]-Next-Permutation)
 - [33. Search in Rotated Sorted Array](./Medium/[33]-Search-in-Rotated-Sorted-Array)
+- [34. Find First and Last Position of Element in Sorted Array](./Medium/[34]-Find-First-and-Last-Position-of-Element-in-Sorted-Array)
 - [45. Jump Game II](./Medium/[45]-Jump-Game-II)
 - [55. Jump Game](./Medium/[55]-Jump-Game)
 - [61. Rotate List](./Medium/[61]-Rotate-List)
