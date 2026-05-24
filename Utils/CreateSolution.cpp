@@ -47,7 +47,7 @@ int main(int argc, char* argv[]) {
       num = match[1];
       title = match[2];
    } else {
-      cerr << "Error: Sai dinh dang 'So. Ten bai'" << endl;
+      cerr << "Error: Invalid format. Expected 'Number. Title'" << endl;
       return 1;
    }
 
@@ -55,7 +55,7 @@ int main(int argc, char* argv[]) {
    string target_dir = difficulty + "/" + folder_name;
 
    if (MKDIR(target_dir) != 0) {
-      cerr << "Error: Khong the tao thu muc hoac thu muc da ton tai!" << endl;
+      cerr << "Error: Could not create directory or it already exists!" << endl;
       return 1;
    }
 
