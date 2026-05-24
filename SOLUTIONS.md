@@ -1,4 +1,4 @@
-# Danh sách bài giải LeetCode
+# LeetCode Solutions List
 
 ## Easy
 
@@ -8,6 +8,7 @@
 - [21. Merge Two Sorted Lists](./Easy/[21]-Merge-Two-Sorted-Lists)
 - [26. Remove Duplicates from Sorted Array](./Easy/[26]-Remove-Duplicates-from-Sorted-Array)
 - [27. Remove Element](./Easy/[27]-Remove-Element)
+- [28. Find the Index of the First Occurrence in a String](./Easy/[28]-Find-the-Index-of-the-First-Occurrence-in-a-String)
 - [35. Search Insert Position](./Easy/[35]-Search-Insert-Position)
 - [58. Length of Last Word](./Easy/[58]-Length-of-Last-Word)
 - [796. Rotate String](./Easy/[796]-Rotate-String)
