@@ -3,11 +3,15 @@ ifeq ($(OS),Windows_NT)
    CMD = $(EXE)
    FLAGS = -std=c++17 -static -lstdc++fs
    MKDIR_DEV = if not exist .dev mkdir .dev
+   RM_CPH = for /d /r . %%d in (.cph) do @if exist "%%d" rd /s /q "%%d"
+   RM_FILES = del /s /q /f *.bin *.exe >nul 2>&1 || exit 0
 else
    EXE = .dev/create
    CMD = ./$(EXE)
    FLAGS = -std=c++17
    MKDIR_DEV = mkdir -p .dev
+   RM_CPH = find . -type d -name ".cph" -exec rm -rf {} +
+   RM_FILES = find . -type f \( -name "*.bin" -o -name "*.exe" \) -exec rm -f {} +
 endif
 
 LAST_SOL = $(shell cat .dev/last_solution.txt 2>/dev/null || type .dev\last_solution.txt 2>nul)
@@ -31,7 +35,12 @@ git: $(EXE)
 	@git push origin $(shell git symbolic-ref --short HEAD)
 	@$(CMD) clear
 
-.PHONY: e m h git $(filter-out e m h git, $(MAKECMDGOALS))
+clear:
+	@$(RM_CPH)
+	@$(RM_FILES)
+	@echo "Cleaned all .cph folders, .bin and .exe files..."
+
+.PHONY: e m h git clear $(filter-out e m h git clear, $(MAKECMDGOALS))
 
 %:
 	@:
