@@ -29,6 +29,9 @@ m: $(EXE)
 h: $(EXE)
 	$(CMD) Hard $(filter-out $@,$(MAKECMDGOALS))
 
+c: $(EXE)
+	$(CMD) Custom $(filter-out $@,$(MAKECMDGOALS))
+
 git: $(EXE)
 	@git add .
 	@git commit -m "feat: add solution and design for $(LAST_SOL)"
@@ -40,7 +43,7 @@ clear:
 	@$(RM_FILES)
 	@echo "Cleaned all .cph folders, .bin and .exe files..."
 
-.PHONY: e m h git clear $(filter-out e m h git clear, $(MAKECMDGOALS))
+.PHONY: e m h c git clear $(filter-out e m h c git clear, $(MAKECMDGOALS))
 
 %:
 	@:

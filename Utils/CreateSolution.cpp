@@ -42,16 +42,29 @@ int main(int argc, char* argv[]) {
    smatch match;
    regex re("^(\\d+)\\.?\\s*(.*)");
    string num, title;
+   string folder_name;
 
-   if (regex_search(full_name, match, re)) {
-      num = match[1];
-      title = match[2];
+   if (difficulty == "Custom") {
+      if (regex_search(full_name, match, re)) {
+         num = match[1];
+         title = match[2];
+         folder_name = "[" + num + "]-" + slugify(title);
+      } else {
+         num = "";
+         title = full_name;
+         folder_name = slugify(title);
+      }
    } else {
-      cerr << "Error: Invalid format. Expected 'Number. Title'" << endl;
-      return 1;
+      if (regex_search(full_name, match, re)) {
+         num = match[1];
+         title = match[2];
+         folder_name = "[" + num + "]-" + slugify(title);
+      } else {
+         cerr << "Error: Invalid format. Expected 'Number. Title'" << endl;
+         return 1;
+      }
    }
 
-   string folder_name = "[" + num + "]-" + slugify(title);
    string target_dir = difficulty + "/" + folder_name;
 
    if (MKDIR(target_dir) != 0) {
@@ -67,66 +80,74 @@ int main(int argc, char* argv[]) {
    md_file << "# Tư duy thiết kế: " << title << "\n\n## Vấn đề\n\n---\n\n## Giải pháp\n\n---\n\n## Tại sao tối ưu?\n\n---\n\n**Tổng kết:**\n";
    md_file.close();
 
-   ifstream sol_file_in("SOLUTIONS.md");
-   vector<string> lines;
-   string line;
-   if (sol_file_in.is_open()) {
-      while (getline(sol_file_in, line)) {
-         lines.push_back(line);
+   if (difficulty == "Custom") {
+      ofstream prob_file(target_dir + "/Problem.md");
+      prob_file << "# " << title << "\n\n## ## Mô Tả Bài Toán\n\n---\n\n## Định Dạng Đầu Vào\n\n---\n\n## Định Dạng Đầu Ra\n\n---\n\n## Ràng Buộc Hệ Thống\n\n---\n\n## Ví Dụ Minh Họa\n\n### Đầu vào mẫu\n\n```text\n\n```\n\n### Đầu ra mẫu\n\n```text\n\n```\n\n### Giải Thích Trực Quan\n";
+      prob_file.close();
+   }
+
+   if (difficulty != "Custom") {
+      ifstream sol_file_in("SOLUTIONS.md");
+      vector<string> lines;
+      string line;
+      if (sol_file_in.is_open()) {
+         while (getline(sol_file_in, line)) {
+            lines.push_back(line);
+         }
+         sol_file_in.close();
       }
-      sol_file_in.close();
-   }
 
-   string new_line = "- [" + num + ". " + title + "](./" + difficulty + "/" + folder_name + ")";
-   int new_num = stoi(num);
+      string new_line = "- [" + num + ". " + title + "](./" + difficulty + "/" + folder_name + ")";
+      int new_num = stoi(num);
 
-   string section_header = "## " + difficulty;
-   int section_start = -1;
-   int section_end = -1;
+      string section_header = "## " + difficulty;
+      int section_start = -1;
+      int section_end = -1;
 
-   for (size_t i = 0; i < lines.size(); ++i) {
-      if (lines[i] == section_header) {
-         section_start = i;
-      } else if (section_start != -1 && section_end == -1 && lines[i].rfind("## ", 0) == 0) {
-         section_end = i;
-      }
-   }
-   if (section_start != -1 && section_end == -1) {
-      section_end = lines.size();
-   }
-
-   bool inserted = false;
-   regex entry_re("^- \\[(\\d+)\\.");
-   smatch entry_match;
-
-   if (section_start != -1) {
-      int insert_pos = section_end;
-      for (int i = section_start + 1; i < section_end; ++i) {
-         string current_line = lines[i];
-         if (regex_search(current_line, entry_match, entry_re)) {
-            int existing_num = stoi(entry_match[1]);
-            if (new_num < existing_num) {
-               insert_pos = i;
-               break;
-            }
+      for (size_t i = 0; i < lines.size(); ++i) {
+         if (lines[i] == section_header) {
+            section_start = i;
+         } else if (section_start != -1 && section_end == -1 && lines[i].rfind("## ", 0) == 0) {
+            section_end = i;
          }
       }
-      lines.insert(lines.begin() + insert_pos, new_line);
-      inserted = true;
-   }
+      if (section_start != -1 && section_end == -1) {
+         section_end = lines.size();
+      }
 
-   ofstream sol_file_out("SOLUTIONS.md");
-   if (inserted) {
-      for (size_t i = 0; i < lines.size(); ++i) {
-         sol_file_out << lines[i] << "\n";
+      bool inserted = false;
+      regex entry_re("^- \\[(\\d+)\\.");
+      smatch entry_match;
+
+      if (section_start != -1) {
+         int insert_pos = section_end;
+         for (int i = section_start + 1; i < section_end; ++i) {
+            string current_line = lines[i];
+            if (regex_search(current_line, entry_match, entry_re)) {
+               int existing_num = stoi(entry_match[1]);
+               if (new_num < existing_num) {
+                  insert_pos = i;
+                  break;
+               }
+            }
+         }
+         lines.insert(lines.begin() + insert_pos, new_line);
+         inserted = true;
       }
-   } else {
-      for (size_t i = 0; i < lines.size(); ++i) {
-         sol_file_out << lines[i] << "\n";
+
+      ofstream sol_file_out("SOLUTIONS.md");
+      if (inserted) {
+         for (size_t i = 0; i < lines.size(); ++i) {
+            sol_file_out << lines[i] << "\n";
+         }
+      } else {
+         for (size_t i = 0; i < lines.size(); ++i) {
+            sol_file_out << lines[i] << "\n";
+         }
+         sol_file_out << "\n" << section_header << "\n\n" << new_line << "\n";
       }
-      sol_file_out << "\n" << section_header << "\n\n" << new_line << "\n";
+      sol_file_out.close();
    }
-   sol_file_out.close();
 
    ofstream last_sol_file(".dev/last_solution.txt");
    if (last_sol_file.is_open()) {
