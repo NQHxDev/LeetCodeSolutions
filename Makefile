@@ -2,7 +2,8 @@ ifeq ($(OS),Windows_NT)
    EXE = .dev/create.exe
    CMD = $(EXE)
    FLAGS = -std=c++17 -static -lstdc++fs
-   ifeq ($(findstring sh,$(SHELL)),sh)
+   IS_SH := $(shell true 2>nul && echo yes)
+   ifeq ($(IS_SH),yes)
       MKDIR_DEV = mkdir -p .dev
       RM_CPH = find . -type d -name ".cph" -exec rm -rf {} +
       RM_FILES = find . -type f \( -name "*.bin" -o -name "*.exe" \) -exec rm -f {} +

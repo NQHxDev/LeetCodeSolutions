@@ -57,3 +57,12 @@
 - [154. Find Minimum in Rotated Sorted Array II](./Hard/[154]-Find-Minimum-in-Rotated-Sorted-Array-II)
 - [1340. Jump Game V](./Hard/[1340]-Jump-Game-V)
 - [1345. Jump Game IV](./Hard/[1345]-Jump-Game-IV)
+
+## Custom
+
+- [Bach Dang River Battle](./Custom/Bach-Dang-River-Battle)
+- [Beautiful Numbers](./Custom/Beautiful-Numbers)
+- [Lucky Number](./Custom/Lucky-Number)
+- [Nested Parsing](./Custom/Nested-Parsing)
+- [Tam Quan Fish Market](./Custom/Tam-Quan-Fish-Market)
+- [Ternary String](./Custom/Ternary-String)

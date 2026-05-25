@@ -86,7 +86,7 @@ int main(int argc, char* argv[]) {
       prob_file.close();
    }
 
-   if (difficulty != "Custom") {
+   {
       ifstream sol_file_in("SOLUTIONS.md");
       vector<string> lines;
       string line;
@@ -97,8 +97,16 @@ int main(int argc, char* argv[]) {
          sol_file_in.close();
       }
 
-      string new_line = "- [" + num + ". " + title + "](./" + difficulty + "/" + folder_name + ")";
-      int new_num = stoi(num);
+      string new_line;
+      if (difficulty == "Custom") {
+         if (num.empty()) {
+            new_line = "- [" + title + "](./" + difficulty + "/" + folder_name + ")";
+         } else {
+            new_line = "- [" + num + ". " + title + "](./" + difficulty + "/" + folder_name + ")";
+         }
+      } else {
+         new_line = "- [" + num + ". " + title + "](./" + difficulty + "/" + folder_name + ")";
+      }
 
       string section_header = "## " + difficulty;
       int section_start = -1;
@@ -116,18 +124,27 @@ int main(int argc, char* argv[]) {
       }
 
       bool inserted = false;
-      regex entry_re("^- \\[(\\d+)\\.");
-      smatch entry_match;
-
       if (section_start != -1) {
          int insert_pos = section_end;
-         for (int i = section_start + 1; i < section_end; ++i) {
-            string current_line = lines[i];
-            if (regex_search(current_line, entry_match, entry_re)) {
-               int existing_num = stoi(entry_match[1]);
-               if (new_num < existing_num) {
-                  insert_pos = i;
-                  break;
+         if (difficulty == "Custom") {
+            // For Custom, append to the end of the section
+            insert_pos = section_end;
+            while (insert_pos > section_start + 1 && lines[insert_pos - 1].empty()) {
+               insert_pos--;
+            }
+         } else {
+            // For Easy/Medium/Hard, sort by number
+            int new_num = stoi(num);
+            regex entry_re("^- \\[(\\d+)\\.");
+            smatch entry_match;
+            for (int i = section_start + 1; i < section_end; ++i) {
+               string current_line = lines[i];
+               if (regex_search(current_line, entry_match, entry_re)) {
+                  int existing_num = stoi(entry_match[1]);
+                  if (new_num < existing_num) {
+                     insert_pos = i;
+                     break;
+                  }
                }
             }
          }

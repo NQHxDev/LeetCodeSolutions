@@ -37,11 +37,15 @@ Welcome to my algorithm repository! This is where I hone my logical thinking and
 ├── Custom/                 # Custom problems (not on LeetCode)
 │   └── Problem_Title/
 │       ├── Solution.cpp
+│       └── Problem.md
 │       └── Design.md
+├── SOLUTIONS.md            # Index of all solved problems
 └── README.md
 ```
 
 Each LeetCode problem is organized within its own directory named `[Problem_No]-Problem_Title` (or `Problem_Title` for Custom problems). Inside, you will find the implementation and detailed design notes.
+
+A complete, categorized index of all solved problems is maintained in [SOLUTIONS.md](./SOLUTIONS.md).
 
 ---
 
