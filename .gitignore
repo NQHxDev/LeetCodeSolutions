@@ -1,5 +1,6 @@
 .dev/
 .cph/
+tests_gen/
 
 .vscode/
 
@@ -9,3 +10,4 @@
 
 NOTE.md
 DevTest.cpp
+*_submission.md
