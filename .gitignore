@@ -9,5 +9,6 @@ tests_gen/
 .DS_Store
 
 NOTE.md
+input.txt
 DevTest.cpp
 *_submission.md

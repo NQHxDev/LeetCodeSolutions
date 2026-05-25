@@ -2,9 +2,15 @@ ifeq ($(OS),Windows_NT)
    EXE = .dev/create.exe
    CMD = $(EXE)
    FLAGS = -std=c++17 -static -lstdc++fs
-   MKDIR_DEV = if not exist .dev mkdir .dev
-   RM_CPH = for /d /r . %%d in (.cph) do @if exist "%%d" rd /s /q "%%d"
-   RM_FILES = del /s /q /f *.bin *.exe >nul 2>&1 || exit 0
+   ifeq ($(findstring sh,$(SHELL)),sh)
+      MKDIR_DEV = mkdir -p .dev
+      RM_CPH = find . -type d -name ".cph" -exec rm -rf {} +
+      RM_FILES = find . -type f \( -name "*.bin" -o -name "*.exe" \) -exec rm -f {} +
+   else
+      MKDIR_DEV = if not exist .dev mkdir .dev
+      RM_CPH = for /d /r . %%d in (.cph) do @if exist "%%d" rd /s /q "%%d"
+      RM_FILES = del /s /q /f *.bin *.exe >nul 2>&1 || exit 0
+   endif
 else
    EXE = .dev/create
    CMD = ./$(EXE)
