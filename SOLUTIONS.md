@@ -34,6 +34,7 @@
 - [31. Next Permutation](./Medium/[31]-Next-Permutation)
 - [33. Search in Rotated Sorted Array](./Medium/[33]-Search-in-Rotated-Sorted-Array)
 - [34. Find First and Last Position of Element in Sorted Array](./Medium/[34]-Find-First-and-Last-Position-of-Element-in-Sorted-Array)
+- [36. Valid Sudoku](./Medium/[36]-Valid-Sudoku)
 - [45. Jump Game II](./Medium/[45]-Jump-Game-II)
 - [55. Jump Game](./Medium/[55]-Jump-Game)
 - [61. Rotate List](./Medium/[61]-Rotate-List)
