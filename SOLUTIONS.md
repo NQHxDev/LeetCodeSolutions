@@ -14,6 +14,7 @@
 - [796. Rotate String](./Easy/[796]-Rotate-String)
 - [1752. Check if Array Is Sorted and Rotated](./Easy/[1752]-Check-if-Array-Is-Sorted-and-Rotated)
 - [2540. Minimum Common Value](./Easy/[2540]-Minimum-Common-Value)
+- [3120. Count the Number of Special Characters I](./Easy/[3120]-Count-the-Number-of-Special-Characters-I)
 
 ## Medium
 
