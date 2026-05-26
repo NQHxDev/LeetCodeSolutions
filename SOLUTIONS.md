@@ -69,3 +69,4 @@
 - [Nested Parsing](./Custom/Nested-Parsing)
 - [Tam Quan Fish Market](./Custom/Tam-Quan-Fish-Market)
 - [Ternary String](./Custom/Ternary-String)
+- [The Bathing Crocodile](./Custom/The-Bathing-Crocodile)
