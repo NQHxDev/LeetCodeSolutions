@@ -40,6 +40,7 @@
 - [55. Jump Game](./Medium/[55]-Jump-Game)
 - [61. Rotate List](./Medium/[61]-Rotate-List)
 - [153. Find Minimum in Rotated Sorted Array](./Medium/[153]-Find-Minimum-in-Rotated-Sorted-Array)
+- [299. Bulls and Cows](./Medium/[299]-Bulls-and-Cows)
 - [396. Rotate Function](./Medium/[396]-Rotate-Function)
 - [788. Rotated Digits](./Medium/[788]-Rotated-Digits)
 - [1306. Jump Game III](./Medium/[1306]-Jump-Game-III)
