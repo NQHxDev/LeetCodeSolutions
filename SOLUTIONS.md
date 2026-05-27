@@ -48,6 +48,7 @@
 - [1871. Jump Game VII](./Medium/[1871]-Jump-Game-VII)
 - [2657. Find the Prefix Common Array of Two Arrays](./Medium/[2657]-Find-the-Prefix-Common-Array-of-Two-Arrays)
 - [3043. Find the Length of the Longest Common Prefix](./Medium/[3043]-Find-the-Length-of-the-Longest-Common-Prefix)
+- [3121. Count the Number of Special Characters II](./Medium/[3121]-Count-the-Number-of-Special-Characters-II)
 - [3660. Jump Game IX](./Medium/[3660]-Jump-Game-IX)
 
 ## Hard
