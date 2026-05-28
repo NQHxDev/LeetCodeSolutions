@@ -65,6 +65,7 @@
 - [154. Find Minimum in Rotated Sorted Array II](./Hard/[154]-Find-Minimum-in-Rotated-Sorted-Array-II)
 - [1340. Jump Game V](./Hard/[1340]-Jump-Game-V)
 - [1345. Jump Game IV](./Hard/[1345]-Jump-Game-IV)
+- [3093. Longest Common Suffix Queries](./Hard/[3093]-Longest-Common-Suffix-Queries)
 
 ## Custom
 
