@@ -66,6 +66,7 @@
 - [1340. Jump Game V](./Hard/[1340]-Jump-Game-V)
 - [1345. Jump Game IV](./Hard/[1345]-Jump-Game-IV)
 - [3093. Longest Common Suffix Queries](./Hard/[3093]-Longest-Common-Suffix-Queries)
+- [3161. Block Placement Queries](./Hard/[3161]-Block-Placement-Queries)
 
 ## Custom
 
